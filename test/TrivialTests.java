@@ -31,4 +31,17 @@ public class TrivialTests {
         boolean actual = sut.esJugable();
         Assertions.assertEquals(expected,actual);
     }
+    @Test
+    public void si_6_jugadores(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+        sut.agregar("Luis");
+        sut.agregar("Sergio");
+        sut.agregar("Gabi");
+        sut.agregar("Fernando");
+        boolean expected = true;
+        boolean actual = sut.esJugable();
+        Assertions.assertEquals(expected,actual);
+    }
 }

@@ -31,7 +31,11 @@ public class Game {
     }
 
     public boolean esJugable() {
-        return (cuantosJugadores() >= 2);
+        boolean res = false;
+        if (cuantosJugadores() >= 2 && cuantosJugadores() <= 6){
+            res = true;
+        }
+        return res;
     }
 
     public boolean agregar(String playerName) {
@@ -48,7 +52,7 @@ public class Game {
     }
 
     public int cuantosJugadores() {
-        return jugadores.size();
+        return jugadores.size() - 1;
     }
 
     public void tirarDado(int puntosDado) {
