@@ -123,12 +123,12 @@ public class Game {
                         + " monedas doradas.");
 
                 boolean ganador = jugadorNoGanador();
-                jugadorActual++;
+                cambiarJugador();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
 
                 return ganador;
             } else {
-                jugadorActual++;
+                cambiarJugador();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
                 return true;
             }
@@ -145,7 +145,7 @@ public class Game {
                     + " monedas doradas.");
 
             boolean ganador = jugadorNoGanador();
-            jugadorActual++;
+            cambiarJugador();
             if (jugadorActual == jugadores.size()) jugadorActual = 0;
 
             return ganador;
@@ -172,5 +172,8 @@ public class Game {
                 + jugadores.get(jugadorActual)
                 + " es "
                 + posiciones[jugadorActual];
+    }
+    public void cambiarJugador(){
+        jugadorActual++;
     }
 }
