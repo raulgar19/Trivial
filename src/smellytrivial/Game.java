@@ -115,39 +115,20 @@ public class Game {
     public boolean fueRespuestaCorrecta() {
         if (enCasillaCastigo[jugadorActual]){
             if (estaSaliendoDeLaCarcel) {
-                System.out.println("Respuesta correcta!!!!");
-                monederos[jugadorActual]++;
-                System.out.println(jugadores.get(jugadorActual)
-                        + " ahora tiene "
-                        + monederos[jugadorActual]
-                        + " monedas doradas.");
-
-                boolean ganador = jugadorNoGanador();
-                cambiarJugador();
+               imprimeInfo();
+                boolean ganador = simplificaDatos();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
                 return ganador;
             } else {
                 cambiarJugador();
                 if (jugadorActual == jugadores.size()) jugadorActual = 0;
                 return true;
             }
-
-
-
-        } else {
-
-            System.out.println("Respuesta correcta!!!!");
-            monederos[jugadorActual]++;
-            System.out.println(jugadores.get(jugadorActual)
-                    + " ahora tiene "
-                    + monederos[jugadorActual]
-                    + " monedas doradas.");
-
-            boolean ganador = jugadorNoGanador();
-            cambiarJugador();
+        }
+        else {
+            imprimeInfo();
+            boolean ganador = simplificaDatos();
             if (jugadorActual == jugadores.size()) jugadorActual = 0;
-
             return ganador;
         }
     }
@@ -175,5 +156,18 @@ public class Game {
     }
     public void cambiarJugador(){
         jugadorActual++;
+    }
+    public boolean simplificaDatos(){
+        boolean ganador = jugadorNoGanador();
+        cambiarJugador();
+        return ganador;
+    }
+    public void imprimeInfo(){
+        System.out.println("Respuesta correcta!!!!");
+        monederos[jugadorActual]++;
+        System.out.println(jugadores.get(jugadorActual)
+                + " ahora tiene "
+                + monederos[jugadorActual]
+                + " monedas doradas.");
     }
 }
