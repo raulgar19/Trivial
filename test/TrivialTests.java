@@ -44,4 +44,18 @@ public class TrivialTests {
         boolean actual = sut.esJugable();
         Assertions.assertEquals(expected,actual);
     }
+    @Test
+    public void salir_de_la_casilla_de_castigo(){
+        Game sut = new Game();
+        sut.agregar("María");
+        sut.agregar("Juan");
+        sut.tirarDado(1);
+        sut.respuestaIncorrecta();
+        sut.tirarDado(1);
+        sut.fueRespuestaCorrecta();
+        sut.tirarDado(1);
+        String expected = "La nueva posicion de María es 2";
+        String actual = sut.nuevaPosicionJudador();
+        Assertions.assertEquals(expected,actual);
+    }
 }
