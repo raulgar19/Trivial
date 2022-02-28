@@ -17,3 +17,6 @@ Se ha cambiado el metodo "jugadorHaGanado" por "jugadorNoGanador" y en el game l
 
 # Problema 5:
 Se crea el metodo "cambiaJugador" y este se cambia en el metodo "fueRespuestCorrecta".
+
+# Problema 6:
+Se han creado los siguientes metodos para simplificar el metodo "fueRespuestaCorrecta": "simplificaDatos" e "imprimeInfo".
