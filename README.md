@@ -13,4 +13,7 @@ Creamos un test con los 6 jugadores pero al ejecutarlo sale un error en el array
 Se crea un test "salir de la casilla de castigo" y el test pasa sin problemas.
 
 # Problema 4:
-Se ha cambiado el metodo "jugadorHaGanado" por "jugadorNoGanador" y en el game launcher se ha cambiado el atributo "noGanador" por "Ganador"
+Se ha cambiado el metodo "jugadorHaGanado" por "jugadorNoGanador" y en el game launcher se ha cambiado el atributo "noGanador" por "Ganador".
+
+# Problema 5:
+Se crea el metodo "cambiaJugador" y este se cambia en el metodo "fueRespuestCorrecta".
